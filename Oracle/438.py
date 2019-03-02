@@ -1,5 +1,5 @@
 #find all anagrams in a string
-
+#memory limit exceed
 class Solution(object):
 
     def findAnagrams(self, s, p):
@@ -24,7 +24,7 @@ class Solution(object):
         return result
 
 
-
+#perfect solution
 class Solution(object):
     def findAnagrams(self, s, p):
         """
@@ -42,6 +42,7 @@ class Solution(object):
             current[ord(c) - 97] += 1
             if i >= length:
                 current[ord(s[i - length]) - 97] -= 1
+            # which means all elements in substring of s should be equal to p which is 'm'
             if current == m:
                 result.append(i - length + 1)
         return result
@@ -68,7 +69,7 @@ class Solution:
 
             if pChar == sChar:
                 result.append(i - p_len + 1)
-        return result1
+        return result
 
 class Solution:
     def findAnagrams(self, s, p):
